@@ -16,6 +16,6 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.filename }}
-    - ${{ inputs.file_id }}
     - ${{ inputs.my_secret }}
+    - ${{ inputs.file_id }}
+    - ${{ inputs.filename }}

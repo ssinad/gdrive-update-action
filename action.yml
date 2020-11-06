@@ -1,0 +1,19 @@
+# - name: Decrypt large secret
+#   run: ./.github/scripts/decrypt_secret.sh
+#   env:
+#     LARGE_FILE_PASSPHRASE: ${{ secrets.LARGE_FILE_PASSPHRASE }}
+
+- name: Upload to Google Drive
+  # env:
+  #   FILE_ID: ${{ secrets.FILE_ID }}
+  inputs:
+    file_id:  # id of input
+      required: true
+    filename:
+      required: true
+      # default: 'hello_world'
+    my_secret:
+      required: true
+  run: |
+    pip3 install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
+    python3 ./gdrive-update.py ${{ inputs.my_secret }} ${{ inputs.file_id }} ${{ inputs.filename }}

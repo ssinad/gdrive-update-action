@@ -12,6 +12,10 @@ inputs:
     # default: 'hello_world'
   my_secret:
     required: true
-run: |
-  pip3 install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
-  python3 ./gdrive-update.py ${{ inputs.my_secret }} ${{ inputs.file_id }} ${{ inputs.filename }}
+runs:
+  using: "composite"
+  steps:
+    - run: |
+        pip3 install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
+        python3 ./gdrive-update.py ${{ inputs.my_secret }} ${{ inputs.file_id }} ${{ inputs.filename }}
+      shell: bash

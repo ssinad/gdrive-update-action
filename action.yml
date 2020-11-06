@@ -3,7 +3,7 @@
 #   env:
 #     LARGE_FILE_PASSPHRASE: ${{ secrets.LARGE_FILE_PASSPHRASE }}
 
-- name: 'Upload to Google Drive'
+name: 'Upload to Google Drive'
   # env:
   #   FILE_ID: ${{ secrets.FILE_ID }}
   inputs:

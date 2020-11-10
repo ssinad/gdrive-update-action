@@ -10,12 +10,12 @@ inputs:
   filename:
     required: true
     # default: 'hello_world'
-  my_secret:
+  key_file:
     required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.my_secret }}
+    - ${{ inputs.key_file }}
     - ${{ inputs.file_id }}
     - ${{ inputs.filename }}

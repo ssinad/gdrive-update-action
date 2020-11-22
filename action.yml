@@ -1,15 +1,9 @@
-# - name: Decrypt large secret
-#   run: ./.github/scripts/decrypt_secret.sh
-#   env:
-#     LARGE_FILE_PASSPHRASE: ${{ secrets.LARGE_FILE_PASSPHRASE }}
-
 name: 'Upload to Google Drive'
 inputs:
-  file_id:  # id of input
+  file_id:  # id of input on Google Drive
     required: true
   filename:
     required: true
-    # default: 'hello_world'
   key_file:
     required: true
 runs:

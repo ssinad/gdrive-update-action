@@ -2,12 +2,12 @@ from sys import argv
 from google.oauth2 import service_account
 import googleapiclient.discovery
 from googleapiclient.http import MediaFileUpload
-import json
+# import json
 
 
+# SERVICE_ACCOUNT_INFO = json.loads(argv[1])
 SCOPES = ['https://www.googleapis.com/auth/drive']
 SERVICE_ACCOUNT_FILE = argv[1]
-# SERVICE_ACCOUNT_INFO = json.loads(argv[1])
 FILE_ID = argv[2]
 
 

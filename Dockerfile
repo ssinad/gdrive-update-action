@@ -1,4 +1,4 @@
-FROM ssinad/docker-images/google-drive-upload-image:latest
+FROM ssinad/google-drive-upload-image:latest
 
 COPY entrypoint.sh /entrypoint.sh
 

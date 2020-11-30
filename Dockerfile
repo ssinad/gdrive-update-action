@@ -1,4 +1,4 @@
-FROM registry.gitlab.com/ssinad/docker-images/google-drive-upload-image:buster
+FROM ssinad/docker-images/google-drive-upload-image:latest
 
 COPY entrypoint.sh /entrypoint.sh
 

@@ -8,7 +8,7 @@ inputs:
     required: true
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'ssinad/google-drive-update-image:3.9.0-slim-buster'
   entrypoint: 'entrypoint.sh'
   args:
     - ${{ inputs.key_file }}

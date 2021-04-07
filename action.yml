@@ -9,7 +9,7 @@ inputs:
 runs:
   using: 'docker'
   image: 'docker://ssinad/google-drive-update:latest'
-  entrypoint: '/github/workspace/entrypoint.sh'
+  entrypoint: ["sh", "-c", "$(cat entrypoint.sh)"]
   args:
     - ${{ inputs.key_file }}
     - ${{ inputs.file_id }}

@@ -8,8 +8,8 @@ inputs:
     required: true
 runs:
   using: 'docker'
-  image: 'Dockerfile'
-  entrypoint: "/entrypoint.sh"
+  image: 'docker://ssinad/google-drive-update:latest'
+  # entrypoint: "/entrypoint.sh"
   args:
     - ${{ inputs.key_file }}
     - ${{ inputs.file_id }}

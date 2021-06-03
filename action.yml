@@ -8,7 +8,7 @@ inputs:
     required: true
 runs:
   using: 'docker'
-  image: 'docker://ssinad/google-drive-update:330842376fb7dbb68db7ba9dee506b02254d2d26'
+  image: 'docker://ssinad/google-drive-update:bff13ab2c9c1a0a7357063fdf8a658b8b20544c2'
   args:
     - ${{ inputs.key_file }}
     - ${{ inputs.file_id }}
